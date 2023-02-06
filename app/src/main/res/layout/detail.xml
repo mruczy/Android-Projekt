@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff1111"
+    tools:context=".Detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#000000"
+                    android:text="Save"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="#000000"
+                    android:text="Back"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <ScrollView
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/text_view_detail_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="#ffff"
+                    android:text="Nickname"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical|center_horizontal"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/text_view_detail_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="#ffff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="10dp"
+                    android:text="Role"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_detail_nickname" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Weapon"
+                            android:textSize="14dp"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Dmg"
+                            android:textSize="14dp"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Ammo"
+                            android:textSize="14dp"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_name_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Weapon"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_dmg_1"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Dmg"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_ammo_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Ammo"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_comment_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_name_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Weapon"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_dmg_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Dmg"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_ammo_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Ammo"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_comment_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_name_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Weapon"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_dmg_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Dmg"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_ammo_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Ammo"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_comment_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_name_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Weapon"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_dmg_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Dmg"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_weapon_ammo_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Ammo"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_weapon_comment_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Armor"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Def"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Penalty"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Head"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_armor_head_defense"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Def"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_armor_head_penalty"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Penalty"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Body"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_armor_body_defense"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Def"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_armor_body_penalty"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Penalty"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Shield"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_armor_shield_defense"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Def"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_armor_shield_penalty"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Penalty"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#000000"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textColor="#ffff"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_4"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_5"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_5"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_6"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_6"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_7"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_7"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_8"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_8"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_9"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_9"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <EditText
+                            android:id="@+id/text_view_qe_equipment_10"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:text="Equipment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/text_view_qe_comment_10"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="40dp"
+                            android:background="#ffff"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="5dp"
+                            android:text="Comment"
+                            android:textSize="14dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
