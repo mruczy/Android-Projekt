@@ -130,6 +130,47 @@ class DBHandler(context: Context) : SQLiteOpenHelper(
         contentValues.put(COLUMN_NICKNAME, character.nickname)
         contentValues.put(COLUMN_ROLE, character.role)
 
+        contentValues.put(COLUMN_WEAPON_NAME_1, character.weaponName1)
+        contentValues.put(COLUMN_WEAPON_DMG_1, character.weaponDmg1)
+        contentValues.put(COLUMN_WEAPON_AMMO_1, character.weaponAmmo1)
+        contentValues.put(COLUMN_WEAPON_NAME_2, character.weaponName2)
+        contentValues.put(COLUMN_WEAPON_DMG_2, character.weaponDmg2)
+        contentValues.put(COLUMN_WEAPON_AMMO_2, character.weaponAmmo2)
+        contentValues.put(COLUMN_WEAPON_NAME_3, character.weaponName3)
+        contentValues.put(COLUMN_WEAPON_DMG_3, character.weaponDmg3)
+        contentValues.put(COLUMN_WEAPON_AMMO_3, character.weaponAmmo3)
+        contentValues.put(COLUMN_WEAPON_NAME_4, character.weaponName4)
+        contentValues.put(COLUMN_WEAPON_DMG_4, character.weaponDmg4)
+        contentValues.put(COLUMN_WEAPON_AMMO_4, character.weaponAmmo4)
+
+        contentValues.put(COLUMN_ARMOR_HEAD_DEF, character.armorHeadDef)
+        contentValues.put(COLUMN_ARMOR_HEAD_PENALTY, character.armorHeadPenalty)
+        contentValues.put(COLUMN_ARMOR_BODY_DEF, character.armorBodyDef)
+        contentValues.put(COLUMN_ARMOR_BODY_PENALTY, character.armorBodyPenalty)
+        contentValues.put(COLUMN_ARMOR_SHIELD_DEF, character.armorShieldDef)
+        contentValues.put(COLUMN_ARMOR_SHIELD_PENALTY, character.armorShieldPenalty)
+
+        contentValues.put(COLUMN_EQ_EQUIPMENT_1, character.EqEquipment1)
+        contentValues.put(COLUMN_EQ_COMMENT_1, character.EqComment1)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_2, character.EqEquipment2)
+        contentValues.put(COLUMN_EQ_COMMENT_2, character.EqComment2)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_3, character.EqEquipment3)
+        contentValues.put(COLUMN_EQ_COMMENT_3, character.EqComment3)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_4, character.EqEquipment4)
+        contentValues.put(COLUMN_EQ_COMMENT_4, character.EqComment4)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_5, character.EqEquipment5)
+        contentValues.put(COLUMN_EQ_COMMENT_5, character.EqComment5)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_6, character.EqEquipment6)
+        contentValues.put(COLUMN_EQ_COMMENT_6, character.EqComment6)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_7, character.EqEquipment7)
+        contentValues.put(COLUMN_EQ_COMMENT_7, character.EqComment7)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_8, character.EqEquipment8)
+        contentValues.put(COLUMN_EQ_COMMENT_8, character.EqComment8)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_9, character.EqEquipment9)
+        contentValues.put(COLUMN_EQ_COMMENT_9, character.EqComment9)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_10, character.EqEquipment10)
+        contentValues.put(COLUMN_EQ_COMMENT_10, character.EqComment10)
+
         db.insert(TABLE_CHARACTERS, null, contentValues)
         db.close()
     }
@@ -141,8 +182,97 @@ class DBHandler(context: Context) : SQLiteOpenHelper(
         db.close()
     }
 
-    fun updateCharacter(){
-        TODO("Not yet implemented")
+    fun updateCharacter(
+        id: Int,
+        nickname: String,
+        role: String,
+        weaponName1: String,
+        weaponDmg1: String,
+        weaponAmmo1: String,
+        weaponName2: String,
+        weaponDmg2: String,
+        weaponAmmo2: String,
+        weaponName3: String,
+        weaponDmg3: String,
+        weaponAmmo3: String,
+        weaponName4: String,
+        weaponDmg4: String,
+        weaponAmmo4: String,
+        armorHeadDef: String,
+        armorHeadPenalty: String,
+        armorBodyDef: String,
+        armorBodyPenalty: String,
+        armorShieldDef: String,
+        armorShieldPenalty: String,
+        EqEquipment1: String,
+        EqComment1:String,
+        EqEquipment2: String,
+        EqComment2:String,
+        EqEquipment3: String,
+        EqComment3:String,
+        EqEquipment4: String,
+        EqComment4:String,
+        EqEquipment5: String,
+        EqComment5:String,
+        EqEquipment6: String,
+        EqComment6:String,
+        EqEquipment7: String,
+        EqComment7:String,
+        EqEquipment8: String,
+        EqComment8:String,
+        EqEquipment9: String,
+        EqComment9:String,
+        EqEquipment10: String,
+        EqComment10:String,
+    ){
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(COLUMN_NICKNAME, nickname)
+        contentValues.put(COLUMN_ROLE, role)
+
+        contentValues.put(COLUMN_WEAPON_NAME_1, weaponName1)
+        contentValues.put(COLUMN_WEAPON_DMG_1, weaponDmg1)
+        contentValues.put(COLUMN_WEAPON_AMMO_1, weaponAmmo1)
+        contentValues.put(COLUMN_WEAPON_NAME_2, weaponName2)
+        contentValues.put(COLUMN_WEAPON_DMG_2, weaponDmg2)
+        contentValues.put(COLUMN_WEAPON_AMMO_2, weaponAmmo2)
+        contentValues.put(COLUMN_WEAPON_NAME_3, weaponName3)
+        contentValues.put(COLUMN_WEAPON_DMG_3, weaponDmg3)
+        contentValues.put(COLUMN_WEAPON_AMMO_3, weaponAmmo3)
+        contentValues.put(COLUMN_WEAPON_NAME_4, weaponName4)
+        contentValues.put(COLUMN_WEAPON_DMG_4, weaponDmg4)
+        contentValues.put(COLUMN_WEAPON_AMMO_4, weaponAmmo4)
+
+        contentValues.put(COLUMN_ARMOR_HEAD_DEF, armorHeadDef)
+        contentValues.put(COLUMN_ARMOR_HEAD_PENALTY, armorHeadPenalty)
+        contentValues.put(COLUMN_ARMOR_BODY_DEF, armorBodyDef)
+        contentValues.put(COLUMN_ARMOR_BODY_PENALTY, armorBodyPenalty)
+        contentValues.put(COLUMN_ARMOR_SHIELD_DEF, armorShieldDef)
+        contentValues.put(COLUMN_ARMOR_SHIELD_PENALTY, armorShieldPenalty)
+
+        contentValues.put(COLUMN_EQ_EQUIPMENT_1, EqEquipment1)
+        contentValues.put(COLUMN_EQ_COMMENT_1, EqComment1)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_2, EqEquipment2)
+        contentValues.put(COLUMN_EQ_COMMENT_2, EqComment2)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_3, EqEquipment3)
+        contentValues.put(COLUMN_EQ_COMMENT_3, EqComment3)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_4, EqEquipment4)
+        contentValues.put(COLUMN_EQ_COMMENT_4, EqComment4)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_5, EqEquipment5)
+        contentValues.put(COLUMN_EQ_COMMENT_5, EqComment5)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_6, EqEquipment6)
+        contentValues.put(COLUMN_EQ_COMMENT_6, EqComment6)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_7, EqEquipment7)
+        contentValues.put(COLUMN_EQ_COMMENT_7, EqComment7)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_8, EqEquipment8)
+        contentValues.put(COLUMN_EQ_COMMENT_8, EqComment8)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_9, EqEquipment9)
+        contentValues.put(COLUMN_EQ_COMMENT_9, EqComment9)
+        contentValues.put(COLUMN_EQ_EQUIPMENT_10, EqEquipment10)
+        contentValues.put(COLUMN_EQ_COMMENT_10, EqComment10)
+
+        db.update(TABLE_CHARACTERS, contentValues, "$COLUMN_ID=$id", null)
+        db.close()
     }
 
     fun getCharacter() : MutableList<Character> {
